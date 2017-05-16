@@ -1,0 +1,213 @@
+#############################################
+Day 3
+#############################################
+Concepts Learned:
+Method Handles
+Lambda Metafactory
+Dynamic Proxy
+Streams and its operations
+Optional
+Collectors
+CopyOnWriteArrayList
+CustomCollectors
+Parallel Streams
+ForkAndJoin
+WorkStealing
+SplitIterator
+CompletableFuture
+#############################################
+isolcpu :: scheduling algo for kernel
+Exclusive CPUset ... /proc/cpuinfo
+JNA : Java native api
+OpenHFT/JTA
+#############################################
+
+#############################################
+Books
+Java concurrency in practice
+Douglas Lee: Concurrent programming in java
+Art of Multiprocessor programming in java (http://www.amazon.com/The-Multiprocessor-Programming-Revised-Reprint/dp/0123973376)
+
+Blog:
+jeremymanson.blogspot.com/
+http://www.cliffc.org/blog/
+https://labs.oracle.com/pls/apex/f?p=labs:bio:0:29
+
+Best classes:
+Best HashMap : concurrenthashmap(when gets are more), nonblockinghashmap(when puts are more)
+Best TreeMap, TreeSet : concurrentskiplistmap, concurrentskiplistset
+Best Queue: concurrentlinkedqueue
+Best Blocking queue: linkedtransfer queue 
+Best HashSet: collections.newSetFromMap(new ConcurrentHashMap), NonBlockingHashSet
+#############################################
+
+How to use material
+- resources/bin/install.sh after unzipping all the jars at same location
+
+#############################################
+Tools:
+jmx:mxbeans ::: for profiling ... to get wait to compute time
+solaris analyzer
+#############################################
+
+#############################################
+Day 2
+#############################################
+Concepts Learned: hardware locking (cmpxchg)
+java.util.concurrency -> unsafe library -> jvn.so (cmpxchng)
+ConcurrentLinkedQueue
+Wait Free Datastructures
+Java profilers measure at safe point
+PMC register (p measurement profiler): production time profiling -- perf for linux
+Concurrent HashMaps
+Lock Striping
+WaitFree Hashmap
+NonBlockingHashMap(HighlyScalable Library)
+interfaces can have static methods
+static importing of functions
+
+Readup on invokedynamics 
+Readup on methodhandles
+
+#############################################
+Iterators
+
+Fail fast iterators:
+Java collection util library provides fail fast iterators 
+
+They compare total number of mutable operations done through the iterator with total number of mutable operations done on the underlying collection and throw a concurrentmodificationexception (modcount)
+
+Weakly consistent iterators:
+Java Util concurrent library provides weakly consistent iterators 
+THey extend core iterator contract with an additional guarantee to never throw concurrentModificationexception.
+
+
+#############################################
+Wait Free Datastructures:
+CAS is A NON BLOCKING algorithm which may suffer from local starvation but can ensure global progress 
+
+Wait Free Algos are built on non-blocking algo (like cas) which ensure progress in a definite number of steps 
+
+#############################################
+Properties of atomic classes :
+- The reordering, caching, happens before semantics of atomic variables is identical to that of volatile
+- This guarantee does not apply to certain special case methods like lazyset, weakcompareandset
+
+Adv: 
+Optimistic in nature 
+Implemented in hardware hence extremely lightweight 
+Can reduce the granularity of lock to an individual memory location 
+
+Disadv:
+The code becomes complex 
+the atomic classes provides atomic update guarantees for an individual memory location but not for multiple locations
+
+#############################################
+Terms:
+Variable Clock Frequency
+#############################################
+
+
+#############################################
+Tools:
+cpufreq-info:
+jmh: micro benchmarking software
+javap: java decompiler
+#############################################
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+#############################################
+Day 1
+#############################################
+
+
+When adaptive spinning happens
+-------------------------------
+sync & jdk 6+ :: adaptive spin
+
+linktransferqueue jdk7 ::: adaptive spin
+
+renterant lock ::: no adaptive spin
+
+Best practice: Object should be final on which we take the lock because if the object is immutable, editing the object means a new object is created.
+
+#############################################
+concepts learned: wait, notify, notifyAll
+#############################################
+
+#############################################
+Tools:
+------
+likvid-topology : To get the cache sizes
+mpstat: get stats of all the CPU
+taskset : specify the hyper thread
+vmstat : to see blocked and running threads
+jcstress : Java concurrency stress tool.
+jol : java object layout ... to see how much memory your object is taking
+mesi : cache management protocol
+program counter graphs
+#############################################
+Reasons for synch the get in linked list :
+- Get should not look inside the structure mid way through the multiple step operations 
+- The accessors should read data from main memory - synronization ensures this and they are not read from cache
+
+Reasons for synch the put in linked list :
+- We don't want  a lost update
+- The read/write should happen from main memory
+
+#############################################
+Terms:
+Hyper Threading
+sys filesystem and proc filesystem
+Cache lines
+Prefetching of data
+#############################################
+L4 access is 64 times slower than L1,L2 ... L1 = 1ns ... L2 = 3 ns ... L3 = 15 ... L4= .... main memory = 64ns
+#############################################
+Why synchronization is required:
+mutual exclusions
+guarantee against caching 
+guarantee again reordering
+happens before relationship
+#############################################
+Java memory model 
+old:
+volatile reads to the main memory & writes to main memory 
+volatile cannot get reordered with another volatile but may get reordered with another non volatile 
+
+new:
+volatile reads to the main memory & writes to main memory 
+volatile cannot get reordered.
+volatile variable observed happens before relationship
+#############################################
+
+Open questions:
+How volatile variables work?
+#############################################
+
+There are certain special methods in java which cannot be reordered, whose affects cannot be cached and they observe a happens-before relationship
+- Thread.start
+- Object.wait, notify,notifyAll
+- Lock.*
+- Condition.*
+
+#############################################
+final keyword
+old:
+finals definition is under specified allowing jvm witers to reorder and/or cached finals
+
+jvm cannot execute special special cpu cachcing instructions for finals because they are not sure that the value they see is before or after initialization 
+
+new:
+if final fields are initialized in the constructor, then the address of the enclosing object is not allowed to escape until the final fields are properly initialized and changes properly pushed to the main memory
+
+jvm can execute special special cpu cachcing instructions for finals 
+
+final fields observe a freezing effect
+#############################################
+concurrency guarantees of a static block is identical to final 
+#############################################
+
+
+highbeam
