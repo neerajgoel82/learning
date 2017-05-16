@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Web Fonts First Look</key>
+	<string>James Williamson</string>
+	<key>CSS Fundamentals</key>
+	<string>James Williamson</string>
+	<key>CSS: Advanced Typographic Techniques</key>
+	<string>James Williamson</string>
+	<key>Creating and Managing a Blog Network with WordPress</key>
+	<string>Justin Seeley</string>
+	<key>Photoshop for Web Design</key>
+	<string>Justin Seeley</string>
+	<key>Muse Essential Training</key>
+	<string>James Fritz</string>
+	<key>CSS: Styling Forms</key>
+	<string>Ray Villalobos</string>
+	<key>JavaScript: Events</key>
+	<string>Ray Villalobos</string>
+	<key>Foundations of UX: Prototyping</key>
+	<string>James Williamson</string>
+	<key>HTML5: document Editing in Depth</key>
+	<string>Bill Weinman</string>
+	<key>Bootstrap 3: Advanced Web Development</key>
+	<string>Ray Villalobos</string>
+</dict>
+</plist>

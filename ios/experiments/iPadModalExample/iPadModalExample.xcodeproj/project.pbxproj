@@ -1,0 +1,485 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07DF3C201944BD5F00798489 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DF3C1F1944BD5F00798489 /* Foundation.framework */; };
+		07DF3C221944BD5F00798489 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DF3C211944BD5F00798489 /* CoreGraphics.framework */; };
+		07DF3C241944BD5F00798489 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DF3C231944BD5F00798489 /* UIKit.framework */; };
+		07DF3C2A1944BD5F00798489 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07DF3C281944BD5F00798489 /* InfoPlist.strings */; };
+		07DF3C2C1944BD5F00798489 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF3C2B1944BD5F00798489 /* main.m */; };
+		07DF3C301944BD5F00798489 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF3C2F1944BD5F00798489 /* AppDelegate.m */; };
+		07DF3C331944BD5F00798489 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07DF3C311944BD5F00798489 /* Main.storyboard */; };
+		07DF3C361944BD5F00798489 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF3C351944BD5F00798489 /* MasterViewController.m */; };
+		07DF3C391944BD5F00798489 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF3C381944BD5F00798489 /* DetailViewController.m */; };
+		07DF3C3B1944BD5F00798489 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07DF3C3A1944BD5F00798489 /* Images.xcassets */; };
+		07DF3C421944BD5F00798489 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DF3C411944BD5F00798489 /* XCTest.framework */; };
+		07DF3C431944BD5F00798489 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DF3C1F1944BD5F00798489 /* Foundation.framework */; };
+		07DF3C441944BD5F00798489 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DF3C231944BD5F00798489 /* UIKit.framework */; };
+		07DF3C4C1944BD5F00798489 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07DF3C4A1944BD5F00798489 /* InfoPlist.strings */; };
+		07DF3C4E1944BD5F00798489 /* iPadModalExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF3C4D1944BD5F00798489 /* iPadModalExampleTests.m */; };
+		07DF3C591944BFF200798489 /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF3C581944BFF200798489 /* TutorialViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		07DF3C451944BD5F00798489 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07DF3C141944BD5F00798489 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07DF3C1B1944BD5F00798489;
+			remoteInfo = iPadModalExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07DF3C1C1944BD5F00798489 /* iPadModalExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPadModalExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		07DF3C1F1944BD5F00798489 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		07DF3C211944BD5F00798489 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		07DF3C231944BD5F00798489 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		07DF3C271944BD5F00798489 /* iPadModalExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iPadModalExample-Info.plist"; sourceTree = "<group>"; };
+		07DF3C291944BD5F00798489 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		07DF3C2B1944BD5F00798489 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		07DF3C2D1944BD5F00798489 /* iPadModalExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iPadModalExample-Prefix.pch"; sourceTree = "<group>"; };
+		07DF3C2E1944BD5F00798489 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		07DF3C2F1944BD5F00798489 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		07DF3C321944BD5F00798489 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		07DF3C341944BD5F00798489 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		07DF3C351944BD5F00798489 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		07DF3C371944BD5F00798489 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		07DF3C381944BD5F00798489 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		07DF3C3A1944BD5F00798489 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		07DF3C401944BD5F00798489 /* iPadModalExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iPadModalExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		07DF3C411944BD5F00798489 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		07DF3C491944BD5F00798489 /* iPadModalExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iPadModalExampleTests-Info.plist"; sourceTree = "<group>"; };
+		07DF3C4B1944BD5F00798489 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		07DF3C4D1944BD5F00798489 /* iPadModalExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iPadModalExampleTests.m; sourceTree = "<group>"; };
+		07DF3C571944BFF200798489 /* TutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialViewController.h; sourceTree = "<group>"; };
+		07DF3C581944BFF200798489 /* TutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		07DF3C191944BD5F00798489 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07DF3C221944BD5F00798489 /* CoreGraphics.framework in Frameworks */,
+				07DF3C241944BD5F00798489 /* UIKit.framework in Frameworks */,
+				07DF3C201944BD5F00798489 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07DF3C3D1944BD5F00798489 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07DF3C421944BD5F00798489 /* XCTest.framework in Frameworks */,
+				07DF3C441944BD5F00798489 /* UIKit.framework in Frameworks */,
+				07DF3C431944BD5F00798489 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07DF3C131944BD5F00798489 = {
+			isa = PBXGroup;
+			children = (
+				07DF3C251944BD5F00798489 /* iPadModalExample */,
+				07DF3C471944BD5F00798489 /* iPadModalExampleTests */,
+				07DF3C1E1944BD5F00798489 /* Frameworks */,
+				07DF3C1D1944BD5F00798489 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		07DF3C1D1944BD5F00798489 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				07DF3C1C1944BD5F00798489 /* iPadModalExample.app */,
+				07DF3C401944BD5F00798489 /* iPadModalExampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		07DF3C1E1944BD5F00798489 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07DF3C1F1944BD5F00798489 /* Foundation.framework */,
+				07DF3C211944BD5F00798489 /* CoreGraphics.framework */,
+				07DF3C231944BD5F00798489 /* UIKit.framework */,
+				07DF3C411944BD5F00798489 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		07DF3C251944BD5F00798489 /* iPadModalExample */ = {
+			isa = PBXGroup;
+			children = (
+				07DF3C2E1944BD5F00798489 /* AppDelegate.h */,
+				07DF3C2F1944BD5F00798489 /* AppDelegate.m */,
+				07DF3C311944BD5F00798489 /* Main.storyboard */,
+				07DF3C571944BFF200798489 /* TutorialViewController.h */,
+				07DF3C581944BFF200798489 /* TutorialViewController.m */,
+				07DF3C341944BD5F00798489 /* MasterViewController.h */,
+				07DF3C351944BD5F00798489 /* MasterViewController.m */,
+				07DF3C371944BD5F00798489 /* DetailViewController.h */,
+				07DF3C381944BD5F00798489 /* DetailViewController.m */,
+				07DF3C3A1944BD5F00798489 /* Images.xcassets */,
+				07DF3C261944BD5F00798489 /* Supporting Files */,
+			);
+			path = iPadModalExample;
+			sourceTree = "<group>";
+		};
+		07DF3C261944BD5F00798489 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				07DF3C271944BD5F00798489 /* iPadModalExample-Info.plist */,
+				07DF3C281944BD5F00798489 /* InfoPlist.strings */,
+				07DF3C2B1944BD5F00798489 /* main.m */,
+				07DF3C2D1944BD5F00798489 /* iPadModalExample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		07DF3C471944BD5F00798489 /* iPadModalExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				07DF3C4D1944BD5F00798489 /* iPadModalExampleTests.m */,
+				07DF3C481944BD5F00798489 /* Supporting Files */,
+			);
+			path = iPadModalExampleTests;
+			sourceTree = "<group>";
+		};
+		07DF3C481944BD5F00798489 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				07DF3C491944BD5F00798489 /* iPadModalExampleTests-Info.plist */,
+				07DF3C4A1944BD5F00798489 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		07DF3C1B1944BD5F00798489 /* iPadModalExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07DF3C511944BD5F00798489 /* Build configuration list for PBXNativeTarget "iPadModalExample" */;
+			buildPhases = (
+				07DF3C181944BD5F00798489 /* Sources */,
+				07DF3C191944BD5F00798489 /* Frameworks */,
+				07DF3C1A1944BD5F00798489 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iPadModalExample;
+			productName = iPadModalExample;
+			productReference = 07DF3C1C1944BD5F00798489 /* iPadModalExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		07DF3C3F1944BD5F00798489 /* iPadModalExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07DF3C541944BD5F00798489 /* Build configuration list for PBXNativeTarget "iPadModalExampleTests" */;
+			buildPhases = (
+				07DF3C3C1944BD5F00798489 /* Sources */,
+				07DF3C3D1944BD5F00798489 /* Frameworks */,
+				07DF3C3E1944BD5F00798489 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07DF3C461944BD5F00798489 /* PBXTargetDependency */,
+			);
+			name = iPadModalExampleTests;
+			productName = iPadModalExampleTests;
+			productReference = 07DF3C401944BD5F00798489 /* iPadModalExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		07DF3C141944BD5F00798489 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Neeraj Goel";
+				TargetAttributes = {
+					07DF3C3F1944BD5F00798489 = {
+						TestTargetID = 07DF3C1B1944BD5F00798489;
+					};
+				};
+			};
+			buildConfigurationList = 07DF3C171944BD5F00798489 /* Build configuration list for PBXProject "iPadModalExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 07DF3C131944BD5F00798489;
+			productRefGroup = 07DF3C1D1944BD5F00798489 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				07DF3C1B1944BD5F00798489 /* iPadModalExample */,
+				07DF3C3F1944BD5F00798489 /* iPadModalExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		07DF3C1A1944BD5F00798489 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07DF3C3B1944BD5F00798489 /* Images.xcassets in Resources */,
+				07DF3C2A1944BD5F00798489 /* InfoPlist.strings in Resources */,
+				07DF3C331944BD5F00798489 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07DF3C3E1944BD5F00798489 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07DF3C4C1944BD5F00798489 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		07DF3C181944BD5F00798489 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07DF3C301944BD5F00798489 /* AppDelegate.m in Sources */,
+				07DF3C361944BD5F00798489 /* MasterViewController.m in Sources */,
+				07DF3C2C1944BD5F00798489 /* main.m in Sources */,
+				07DF3C391944BD5F00798489 /* DetailViewController.m in Sources */,
+				07DF3C591944BFF200798489 /* TutorialViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07DF3C3C1944BD5F00798489 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07DF3C4E1944BD5F00798489 /* iPadModalExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		07DF3C461944BD5F00798489 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07DF3C1B1944BD5F00798489 /* iPadModalExample */;
+			targetProxy = 07DF3C451944BD5F00798489 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		07DF3C281944BD5F00798489 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07DF3C291944BD5F00798489 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		07DF3C311944BD5F00798489 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07DF3C321944BD5F00798489 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		07DF3C4A1944BD5F00798489 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07DF3C4B1944BD5F00798489 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		07DF3C4F1944BD5F00798489 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		07DF3C501944BD5F00798489 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		07DF3C521944BD5F00798489 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iPadModalExample/iPadModalExample-Prefix.pch";
+				INFOPLIST_FILE = "iPadModalExample/iPadModalExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		07DF3C531944BD5F00798489 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iPadModalExample/iPadModalExample-Prefix.pch";
+				INFOPLIST_FILE = "iPadModalExample/iPadModalExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		07DF3C551944BD5F00798489 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iPadModalExample.app/iPadModalExample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iPadModalExample/iPadModalExample-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "iPadModalExampleTests/iPadModalExampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		07DF3C561944BD5F00798489 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iPadModalExample.app/iPadModalExample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iPadModalExample/iPadModalExample-Prefix.pch";
+				INFOPLIST_FILE = "iPadModalExampleTests/iPadModalExampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		07DF3C171944BD5F00798489 /* Build configuration list for PBXProject "iPadModalExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07DF3C4F1944BD5F00798489 /* Debug */,
+				07DF3C501944BD5F00798489 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07DF3C511944BD5F00798489 /* Build configuration list for PBXNativeTarget "iPadModalExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07DF3C521944BD5F00798489 /* Debug */,
+				07DF3C531944BD5F00798489 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		07DF3C541944BD5F00798489 /* Build configuration list for PBXNativeTarget "iPadModalExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07DF3C551944BD5F00798489 /* Debug */,
+				07DF3C561944BD5F00798489 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 07DF3C141944BD5F00798489 /* Project object */;
+}
