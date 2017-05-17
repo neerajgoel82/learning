@@ -8,5 +8,17 @@
     <artifactId>AkkaHttpSamples</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.typesafe.akka</groupId>
+            <artifactId>akka-http-core_2.11</artifactId>
+            <version>10.0.6</version>
+        </dependency>
 
+        <dependency>
+            <groupId>com.typesafe.akka</groupId>
+            <artifactId>akka-http_2.11</artifactId>
+            <version>10.0.6</version>
+        </dependency>
+    </dependencies>
 </project>
