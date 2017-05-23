@@ -12,7 +12,6 @@ trait Generator[+T] {
   def flatMap[U](f: (T => Generator[U])): Generator[U] = new Generator[U] {
     def generate = f(self.generate).generate
   }
-
 }
 
 val integers = new Generator[Int] {
@@ -34,76 +33,72 @@ val pairs2 = integers.flatMap(x => integers.map(y => (x,y)))
 pairs.generate
 pairs2.generate
 
-
 def single[T](x: T) = new Generator[T] {
   def generate = x
 }
+val fiveGenerator = single(5)
+fiveGenerator.generate
+fiveGenerator.generate
 
 def choose(low: Int, high: Int) : Generator[Int] = {
   for(x <- integers) yield low + math.abs(x % (high - low))
 }
+choose(4,10).generate
 
 def oneOf[T](xs: T*): Generator[T] = {
   for(idx <- choose(0,xs.length)) yield xs(idx)
 }
 
-/*
-val booleans = integers.map(_ > 0)
+oneOf(1,2,3).generate
+
+def lists: Generator[List[Int]] = for {
+  isEmpty <- booleans
+  list <- if (isEmpty) emptyList else nonEmptyList
+} yield list
+
+def emptyList = single(Nil)
+
+def nonEmptyList = for {
+  head <- integers
+  tail <- lists
+} yield head :: tail
+
+
+print(lists.generate)
 
 trait Tree
+case class Inner(left: Tree, right: Tree) extends Tree
+case class Leaf(value:Int) extends Tree
 
-case class Inner(left: Tree, right: Tree, x: Int) extends Tree
+def leaves : Generator[Leaf] = for {
+  x <- integers
+} yield Leaf(x)
 
-case class Leaf(x: Int) extends Tree
+def inners : Generator[Inner] = for {
+  left <- trees
+  right <- trees
+} yield Inner(left, right)
 
-// we will generate a tree randomly using boolean and integer generators
-// and then print the generated tree to stdout, the tree will only be printed
-// if it has less than depth 6 or less than 128 elements
+def trees : Generator[Tree] =
+  for {
+    isLeaf <- booleans
+    node <- if (isLeaf) leaves else inners
+  } yield node
 
-def treeGenerator: Tree = {
-  def treeOrLeaf(choice: Boolean): Tree = {
-    if(choice) Leaf(choose(0,10).generate)
-    else Inner(treeOrLeaf(booleans.generate),treeOrLeaf(booleans.generate),choose(0,10).generate)
+def printTree (root:Tree): Unit = {
+  root match {
+    case Inner(left, right) =>
+      printTree(left)
+      printTree(right)
+    case Leaf(value) => print(f"[${value}]")
   }
-  treeOrLeaf(booleans.generate)
 }
 
+printTree(trees.generate)
+
+
+/*
 def generatePowers(max: Int) = (Iterator.iterate(1)(_ * 2) takeWhile (_ < ((max+1) * 2))).toList
-
-def treePrinter(tree: Tree): Unit = {
-  def createTuplesFromTree(tree: Tree, level: Int): List[(Int,String)] = tree match {
-    case Inner(left,right,x) =>  {
-      (level -> x.toString) :: (createTuplesFromTree(left,level*2) :::
-        createTuplesFromTree(right,level*2+1))
-    }
-    case Leaf(x) => (level -> x.toString) :: Nil
-  }
-
-  // FIXME the following code to print the tree is very imperative like :(
-  val tupleList = createTuplesFromTree(tree,1)
-  val max = tupleList.map(xy => xy._1).max
-  val tupleMap = tupleList.toMap withDefaultValue("*")
-  val powers = generatePowers(max)
-  val powerMax = if(powers.length > 1) powers.filter(_ > max)(0) else max
-
-  if(powerMax < math.pow(2,6)+1) {
-    var spaces = powerMax - 1
-    for (i <- 1 to max) {
-      print((" " * spaces) + {
-        if (tupleMap(i) == "*") "   "
-        else "[" + tupleMap(i) + "]"
-      } +
-        (" " * (spaces - 1)))
-      if (powers.contains(i + 1)) {
-        spaces /= 2
-        print("\n")
-      }
-    }
-  } else println("will not print tree with depth greater than log(max)-1 where max is 128")
-
-}
-
 assert(generatePowers(63).last == 64)
-treePrinter(treeGenerator)
-
 */
+
