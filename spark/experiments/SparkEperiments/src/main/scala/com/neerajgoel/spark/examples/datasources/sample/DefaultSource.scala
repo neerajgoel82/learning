@@ -1,7 +1,7 @@
 package com.neerajgoel.spark.examples.datasources.sample
 
 import org.apache.spark.sql.{DataFrame, SQLContext, SaveMode}
-import org.apache.spark.sql.sources.{BaseRelation, CreatableRelationProvider, RelationProvider, SchemaRelationProvider}
+import org.apache.spark.sql.sources._
 import org.apache.spark.sql.types.StructType
 
 class DefaultSource extends RelationProvider
