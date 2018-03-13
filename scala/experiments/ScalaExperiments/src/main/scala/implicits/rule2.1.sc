@@ -1,5 +1,3 @@
-
-
 class Bar {
   def printSomehing: Unit = {
     print("Inside Bar")
