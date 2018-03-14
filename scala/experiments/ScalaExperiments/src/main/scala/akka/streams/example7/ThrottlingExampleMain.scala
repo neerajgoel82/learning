@@ -21,13 +21,13 @@ object ThrottlingExampleMain extends App {
       .map(s => ByteString(s + "\n"))
       .toMat(FileIO.toPath(Paths.get(filename)))(Keep.right)
 
-  val source: Source[Int, NotUsed] = Source(1 to 5)
+  val source: Source[Int, NotUsed] = Source(1 to 11)
 
   val factorials = source.scan(BigInt(1))((acc, next) => acc * next)
 
   val done: Future[Done] = factorials
-    .zipWith(Source(0 to 4))((num, idx) => s"$idx! = $num")
-    .throttle(1, 1.second, 1, ThrottleMode.shaping)
+    .zipWith(Source(0 to 10))((num, idx) => s"$idx! = $num")
+    .throttle(1, 2.seconds, 5, ThrottleMode.shaping)
     .runForeach(println)
 
   done.onComplete(_ => system.terminate())

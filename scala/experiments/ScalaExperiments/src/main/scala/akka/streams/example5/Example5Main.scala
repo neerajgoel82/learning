@@ -13,7 +13,7 @@ object Example5Main extends App{
 
   final case class Tweet(author: Author, timestamp: Long, body: String) {
     def hashtags: Set[Hashtag] =
-      body.split(" ").filter(_.startsWith("#")).map(t => Hashtag(t)).toSet
+      body.split(" ").collect { case t if t.startsWith("#") => Hashtag(t) }.toSet
   }
 
   val akkaTag = Hashtag("#akka")
@@ -34,7 +34,6 @@ object Example5Main extends App{
   implicit val system = ActorSystem("reactive-tweets")
   implicit val materializer = ActorMaterializer()
   import system.dispatcher
-
   val done = tweets
     .filterNot(_.hashtags.contains(akkaTag))
     .mapConcat(_.hashtags)
