@@ -18,7 +18,7 @@ class TestActor(service:MyService) extends Actor {
 }
 
 class MyService(implicit val ec:ExecutionContext) {
-  def getMessage = Future { "Fred" }
+  def getMessage = Future { "Neeraj" }
 }
 
 
@@ -31,10 +31,9 @@ object AskTest extends App {
 
 
   val myActor = system.actorOf(Props(new TestActor(myService)), name = "myActor")
-  //val future = myActor ? AskNameMessage
-  //val result = Await.result(future, timeout.duration).asInstanceOf[String]
-
-  //println(result)
+  val future = myActor ? AskNameMessage
+  val result = Await.result(future, timeout.duration).asInstanceOf[Future[String]]
+  result.map(message => println(message))
 
   // (2) a slightly different way to ask another actor for information
   val future2: Future[Future[String]] = ask(myActor, AskNameMessage).mapTo[Future[String]]
