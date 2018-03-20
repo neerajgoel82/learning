@@ -31,13 +31,10 @@ object AskTest extends App {
 
 
   val myActor = system.actorOf(Props(new TestActor(myService)), name = "myActor")
-  val future = myActor ? AskNameMessage
-  val result = Await.result(future, timeout.duration).asInstanceOf[Future[String]]
-  result.map(message => println(message))
 
-  // (2) a slightly different way to ask another actor for information
-  val future2: Future[Future[String]] = ask(myActor, AskNameMessage).mapTo[Future[String]]
-  Await.result(future2, 1 second).map(message => println(message))
-
-  system.terminate
+  val future2: Future[String] = ask(myActor, AskNameMessage).mapTo[Future[String]].flatMap(identity)
+  future2.flatMap(message => {
+    println(message)
+    system.terminate
+  })
 }
