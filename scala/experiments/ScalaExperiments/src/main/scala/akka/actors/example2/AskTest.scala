@@ -27,7 +27,7 @@ object AskTest extends App {
   implicit val timeout = Timeout(5 second)
   val system = ActorSystem("AskTestSystem")
 
-  val myService = new MyService()
+  val myService = new MyService ()
 
 
   val myActor = system.actorOf(Props(new TestActor(myService)), name = "myActor")
