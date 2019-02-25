@@ -24,7 +24,7 @@ public class KyotoReadAndWriteExecutorServiceSingleDB {
            DB db = new DB();
 
            // open the database
-           if (!db.open("casket.kcd", DB.OWRITER | DB.OCREATE)) {
+           if (!db.open("casket.kch", DB.OWRITER | DB.OCREATE)) {
                System.err.println("open error: " + db.error());
            }
            else {
