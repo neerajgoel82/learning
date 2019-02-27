@@ -22,7 +22,7 @@ public class WriterTest {
 
     public static void main(String[] args) {
         long start = System.nanoTime();
-        long totalRecords = 100;
+        long totalRecords = 100000;
         int numOfCores = 128;
         long runId = 1;
         String dbType = DbTypes.DB_KC;
@@ -38,7 +38,7 @@ public class WriterTest {
 
             ArrayList<Runnable> writerTasks = new ArrayList<Runnable>();
             for (int i = 0; i < numOfCores; i++) {
-                Runnable task = DbAndTasksFactory.getWriterTask (db,i * (totalRecords / numOfCores), (totalRecords / numOfCores), runId);
+                Runnable task = DbAndTasksFactory.getWriterTask (DbTypes.DB_KC, i * (totalRecords / numOfCores), (totalRecords / numOfCores), runId);
                 writerTasks.add(task);
                 pool.execute(task);
             }

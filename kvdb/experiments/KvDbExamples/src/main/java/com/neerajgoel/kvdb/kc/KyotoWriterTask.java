@@ -1,6 +1,8 @@
 package com.neerajgoel.kvdb.kc;
 
 
+import com.neerajgoel.kvdb.common.DbAndTasksFactory;
+import com.neerajgoel.kvdb.common.DbTypes;
 import com.neerajgoel.kvdb.common.KvDb;
 import kyotocabinet.DB;
 
@@ -18,12 +20,26 @@ public class KyotoWriterTask implements Runnable {
     long runId = 0;
     long recordsLimit = 500000;
     DB db = null;
+    boolean managed = false;
+    KvDb kvDb = null ;
 
     public KyotoWriterTask(KvDb db, long startIndex, long count, long runId) {
         this.startIndex = startIndex;
         this.count = count;
         this.runId = runId;
         this.db = (kyotocabinet.DB) db.getDb();
+    }
+
+    public KyotoWriterTask(long startIndex, long count, long runId) {
+        this.startIndex = startIndex;
+        this.count = count;
+        this.runId = runId;
+        this.kvDb = DbAndTasksFactory.getDb(DbTypes.DB_KC);
+        Map<String, Object> props = new HashMap<String, Object>();
+        props.put(KyotoDbProperties.DB_PATH, UUID.randomUUID() + ".kch");
+        kvDb.init(props);
+        this.db = (DB)kvDb.getDb();
+        managed = true;
     }
 
     String randomString( int len ){
@@ -43,6 +59,10 @@ public class KyotoWriterTask implements Runnable {
 
         for(int i = 0 ; i < count;i++) {
             db.set("foo"  + i + startIndex+ "_" + runId, generatedString);
+        }
+
+        if(managed) {
+            kvDb.cleanup();
         }
     }
 

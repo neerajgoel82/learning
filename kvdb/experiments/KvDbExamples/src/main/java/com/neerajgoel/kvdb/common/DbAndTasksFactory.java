@@ -20,4 +20,13 @@ public class DbAndTasksFactory {
             throw new UnsupportedOperationException();
         }
     }
+
+    public static Runnable getWriterTask(String dbType, long startIndex, long count, long runId){
+        if(dbType.equalsIgnoreCase(DbTypes.DB_KC)){
+            return new KyotoWriterTask(startIndex, count, runId);
+        }
+        else {
+            throw new UnsupportedOperationException();
+        }
+    }
 }
